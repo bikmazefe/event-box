@@ -1,0 +1,19 @@
+<div class = "event">
+    <div class = "event-container">
+        <% if current_user.id == @event.creator_id%>
+            <%= link_to '+ Send Invitation', { controller: 'invitations', action: 'new', id: @event.id}, class: "new-event-link"%>
+        <%end%>
+        <h2>Event Name: <%= @event.event_name %></h2>
+        <h3><img src="https://img.icons8.com/android/24/000000/calendar.png"/> <%= @event.event_date.to_formatted_s(:long)%></h3>
+        <h3><img src="https://img.icons8.com/material-sharp/24/000000/person-male.png"/> Created by: <%= @event.creator.username%></h3>
+        <h3><img src="https://img.icons8.com/material/24/000000/worldwide-location--v1.png"/> <%= @event.location%></h3>
+        <h4>Attendees</h4>
+        <ul>
+        <% @event.attendees.each do |attendee|%>
+            <li>- <%= attendee.username%></li>
+        <%end%>
+        </ul>
+    </div>
+</div>
+
+<%= link_to '<< Back', root_path %>

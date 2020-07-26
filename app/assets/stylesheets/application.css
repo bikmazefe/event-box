@@ -13,3 +13,245 @@
  *= require_tree .
  *= require_self
  */
+
+ * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    text-align: center;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 8vh;
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    border-bottom: 1px solid rgb(216, 213, 213);
+    -webkit-box-shadow: 0px 20px 45px -38px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 20px 45px -38px rgba(0,0,0,0.75);
+    box-shadow: 0px 20px 45px -38px rgba(0,0,0,0.75);
+}
+
+.logo {
+    margin-left: 50px;
+}
+
+header {
+    background-image: url("header.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 500px;
+    text-align: center;
+    padding: 100px;
+}
+
+.hero{
+    width: 50%;
+    margin: 0 auto;
+    padding: 50px;
+    background-color: rgba(66, 57, 57, 0.644);
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+.join-button{
+    margin-top: 50px;
+    padding: 10px;
+    width: 150px;
+    background-color: mediumslateblue;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    font-weight: 200;
+    border-radius: 5px;
+}
+
+.nav-links{
+    display: flex;
+    width: 25%;
+    justify-content: space-evenly;
+ }
+
+ .nav-links li {
+     list-style: none;
+ }
+
+ .nav-links a {
+    color: black;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+ }
+
+
+ @media screen and (max-width:1024px) {
+    .nav-links{
+        width: 60%;
+     }
+}
+ 
+
+ footer{
+     margin-top: 100px;
+     padding: 20px;
+     text-align: center;
+     font-family: 'Poppins', sans-serif;
+     color: black;
+     border-top: 1px solid rgb(216, 213, 213);
+ }
+
+ footer a {
+     text-decoration: none;
+     color: black;
+ }
+
+ /* user page */
+.dashboard{
+    margin-top: 50px;
+}
+
+.dashboard h1 {
+    margin-bottom: 20px;
+    color: #106a9c;
+}
+ .user-container{
+     font-family: 'Poppins', sans-serif;
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr 1fr;
+     grid-gap: 10px;
+     width: 90%;
+     margin: 0 auto;
+     margin-top: 30px;
+     color: #106a9c;
+ }
+
+ .grid-item{
+     min-height: 300px;
+     border: 1px solid rgb(216, 213, 213);
+     border-radius: 10px;
+     padding: 5px;
+ }
+
+
+
+ table{
+    text-align: center;
+    width: 90%;
+    border-collapse:collapse;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+th{
+    text-decoration: underline;
+}
+
+td {
+    border-bottom: 1px solid rgb(216, 213, 213);
+}
+
+.info-row {
+  transition: ease-in-out;  
+}
+
+.info-row:hover{
+    background-color: lightgrey;
+}
+
+.success{
+    background-color: rgb(38, 173, 38);
+    color: white;
+    font-family: "Poppins", sans-serif;
+    padding: 10px;
+}
+
+.error{
+    background-color: rgb(182, 26, 26);
+    color: white;
+    font-family: "Poppins", sans-serif;
+    padding: 10px;
+}
+
+.new-event-link{
+    border: 1px solid rgb(216, 213, 213);
+    border-radius: 10px;
+    padding: 10px;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    color: white;
+    background-color: #ff9408;
+}
+
+
+.new-event-link, .join-button:hover{
+    cursor: pointer;
+}
+
+
+.form-input{
+    border-radius: 5px;
+    border: 1px solid rgb(216, 213, 213);
+    margin: 10px 0 10px 0;
+    padding: 10px;
+}
+
+.form-label{
+    font-family: "Poppins", sans-serif;
+}
+
+.form-button{
+    border: 1px solid rgb(216, 213, 213);
+    border-radius: 10px;
+    padding: 10px;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    color: white;
+    background-color: #ff9408;
+}
+
+h1 {
+    margin-bottom: 10px;
+    font-family: "Poppins", sans-serif;
+}
+
+.event{
+    padding: 40px;
+    font-family: "Poppins", sans-serif;
+}
+
+.event li{
+    list-style: none;
+}
+
+.event-container{
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid rgb(216, 213, 213);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.event-container h2, h4{
+   margin-top: 20px;
+}
+
+.event-container h4{
+    text-decoration: underline;
+ }
+
+ .single-event-preview{
+     width: 60%;
+     margin: 0 auto;
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+    border: 1px solid rgb(216, 213, 213); ;
+ }

@@ -1,0 +1,22 @@
+
+<% if logged_in? %>
+    <%= render partial: "dashboard"%>
+<%else%>
+    <header>
+      <div class = "hero">
+        <h1>Welcome to EventBox!</h1>
+        <h3>Create, Attend & Share Events<h3>
+        <%= button_to 'Join Now', new_user_path, method: :get, class:"join-button"%>
+      </div>
+    </header>
+    <div class: "events-preview">
+      <h1>Upcoming Events</h1>
+        <% @events.upcoming_events(Time.now).order(event_date: :asc).each do |event|%>
+        <div class: "single-event-preview">
+          <img src="https://img.icons8.com/android/24/000000/calendar.png"/>   
+          <h3><%=event.event_name%></h3>
+          <h3><%=event.event_date.to_formatted_s(:short)%></h3>
+        </div>
+        <%end%>
+      </div>
+<% end %>
